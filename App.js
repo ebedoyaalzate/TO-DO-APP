@@ -77,10 +77,6 @@ export default class App extends React.Component {
         texto={this.state.texto}
         cambiarTexto={this.establecerTexto} 
         agregar={this.agregarTarea}/>
-        <Button title='Guardar'
-        onPress={()=>{this.guardarEnTelefono()}}/>
-        <Button title='recuperar'
-        onPress={()=>{this.recuperarEnTelefono()}}/>
         <Body tareas={this.state.tareas} eliminar={this.eliminarTarea} cargando={this.state.cargando}/>
       </View>
     );
