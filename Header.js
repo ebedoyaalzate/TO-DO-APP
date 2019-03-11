@@ -5,15 +5,16 @@ export default class Header extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> Header </Text>
         <TextInput
         style={styles.texto}
         onChangeText={this.props.cambiarTexto}
-        placeholder="Aqui escribe tu texto..."/>
+        placeholder="Aqui escribe tu texto..."
+        onSubmitEditing={this.props.agregar}
+        value={this.props.texto}/>
       </View>
     )
   }
-}
+} 
 
 const styles = StyleSheet.create({
     container: {
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     },
     texto:{
         paddingHorizontal: 16,
+        fontSize: 24
     }
   });
   
